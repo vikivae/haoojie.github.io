@@ -582,7 +582,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-12 16:06:47" itemprop="dateModified" datetime="2019-03-12T16:06:47+08:00">2019-03-12</time>
+                <time title="修改时间：2019-03-24 14:11:37" itemprop="dateModified" datetime="2019-03-24T14:11:37+08:00">2019-03-24</time>
               
             
           </span>
@@ -617,23 +617,16 @@
 
       
         
+          <p>本文主要介绍 H3C S2626 镜像口的配置</p>
+          <!--noindex-->
           
-            <h4 id="进入系统视图模式"><a href="#进入系统视图模式" class="headerlink" title="进入系统视图模式"></a>进入系统视图模式</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;H3C&gt;sys</span><br><span class="line">[H3C]</span><br></pre></td></tr></table></figure>
-<h4 id="查看VLAN"><a href="#查看VLAN" class="headerlink" title="查看VLAN"></a>查看VLAN</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C]display vlan &lt;number&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="删除VLAN"><a href="#删除VLAN" class="headerlink" title="删除VLAN"></a>删除VLAN</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C]undo vlan &lt;number&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="新建VLAN"><a href="#新建VLAN" class="headerlink" title="新建VLAN"></a>新建VLAN</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[H3C]vlan 2</span><br><span class="line">[H3C-vlan2]</span><br></pre></td></tr></table></figure>
-<h4 id="添加端口到VLAN"><a href="#添加端口到VLAN" class="headerlink" title="添加端口到VLAN"></a>添加端口到VLAN</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C-vlan2]port Ethernet 1/0/1 to Ethernet 1/0/8</span><br></pre></td></tr></table></figure>
-<h4 id="删除VLAN中端口"><a href="#删除VLAN中端口" class="headerlink" title="删除VLAN中端口"></a>删除VLAN中端口</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C-vlan2]undo port Ethernet 1/0/8</span><br></pre></td></tr></table></figure>
-<p>查看镜像组</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C]display mirroring-group 1</span><br></pre></td></tr></table></figure>
-<p>删除镜像组</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C]undo mirroring-group 1</span><br></pre></td></tr></table></figure>
-<p>创建镜像组</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[H3C]mirroring-group 1 local</span><br></pre></td></tr></table></figure>
-<p>配置镜像组</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> GigabitEthernet1/0/25 为被监测端口</span><br><span class="line">[H3C]mirroring-group 1 mirroring-port GigabitEthernet1/0/25 both </span><br><span class="line"><span class="meta">#</span> Ethernet1/0/8 为监测端口</span><br><span class="line">[H3C]mirroring-group 1 monitor-port Ethernet1/0/8</span><br></pre></td></tr></table></figure>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/11/H3C-S2626配置/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>

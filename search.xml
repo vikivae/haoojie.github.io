@@ -12,7 +12,7 @@
   <entry>
     <title><![CDATA[H3C-S2626配置]]></title>
     <url>%2F2019%2F03%2F11%2FH3C-S2626%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[进入系统视图模式12&lt;H3C&gt;sys[H3C] 查看VLAN1[H3C]display vlan &lt;number&gt; 删除VLAN1[H3C]undo vlan &lt;number&gt; 新建VLAN12[H3C]vlan 2[H3C-vlan2] 添加端口到VLAN1[H3C-vlan2]port Ethernet 1/0/1 to Ethernet 1/0/8 删除VLAN中端口1[H3C-vlan2]undo port Ethernet 1/0/8 查看镜像组 1[H3C]display mirroring-group 1 删除镜像组 1[H3C]undo mirroring-group 1 创建镜像组 1[H3C]mirroring-group 1 local 配置镜像组 1234# GigabitEthernet1/0/25 为被监测端口[H3C]mirroring-group 1 mirroring-port GigabitEthernet1/0/25 both # Ethernet1/0/8 为监测端口[H3C]mirroring-group 1 monitor-port Ethernet1/0/8]]></content>
+    <content type="text"><![CDATA[本文主要介绍 H3C S2626 镜像口的配置 进入系统视图模式12&lt;H3C&gt;sys[H3C] 查看VLAN1[H3C]display vlan &lt;number&gt; 删除VLAN1[H3C]undo vlan &lt;number&gt; 新建VLAN12[H3C]vlan 2[H3C-vlan2] 添加端口到VLAN1[H3C-vlan2]port Ethernet 1/0/1 to Ethernet 1/0/8 删除VLAN中端口1[H3C-vlan2]undo port Ethernet 1/0/8 查看镜像组 1[H3C]display mirroring-group 1 删除镜像组 1[H3C]undo mirroring-group 1 创建镜像组 1[H3C]mirroring-group 1 local 配置镜像组 1234# GigabitEthernet1/0/25 为被监测端口[H3C]mirroring-group 1 mirroring-port GigabitEthernet1/0/25 both # Ethernet1/0/8 为监测端口[H3C]mirroring-group 1 monitor-port Ethernet1/0/8]]></content>
       <tags>
         <tag>交换机</tag>
       </tags>
