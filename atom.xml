@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T12:22:49.276Z</updated>
+  <updated>2019-03-24T05:57:57.399Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑金AX7010/AX7020开发教程一 Windows下安装vivado并导入证书</title>
+    <link href="http://yoursite.com/2019/03/23/AX7010-AX7020-1-vivado/"/>
+    <id>http://yoursite.com/2019/03/23/AX7010-AX7020-1-vivado/</id>
+    <published>2019-03-23T01:27:09.000Z</published>
+    <updated>2019-03-24T05:57:57.399Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;本文属于黑金 AX7010/AX7020开发教程的第一篇文章，主要介绍在 Windows 10 下安装 vivado 的过程，教程源自&lt;code&gt;芯驿电子 ALINX：黑金 AX7010/7020 开发配套教程&lt;/code&gt; ，本文及后续文章都是根据此教程撰写。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="FPGA" scheme="http://yoursite.com/tags/FPGA/"/>
+    
+      <category term="AX7010/AX7020" scheme="http://yoursite.com/tags/AX7010-AX7020/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>H3C-S2626配置</title>
+    <link href="http://yoursite.com/2019/03/11/H3C-S2626%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/03/11/H3C-S2626配置/</id>
+    <published>2019-03-11T08:24:25.000Z</published>
+    <updated>2019-03-12T08:06:47.129Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;进入系统视图模式&quot;&gt;&lt;a href=&quot;#进入系统视图模式&quot; class=&quot;headerlink&quot; title=&quot;进入系统视图模式&quot;&gt;&lt;/a&gt;进入系统视图模式&lt;/h4&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="交换机" scheme="http://yoursite.com/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>vim文件头配置</title>
@@ -35,11 +79,11 @@
   </entry>
   
   <entry>
-    <title>openwrt踩坑</title>
-    <link href="http://yoursite.com/2018/12/05/openwrt%E8%B8%A9%E5%9D%91/"/>
-    <id>http://yoursite.com/2018/12/05/openwrt踩坑/</id>
+    <title>OpenWrt踩坑</title>
+    <link href="http://yoursite.com/2018/12/05/OpenWrt%E8%B8%A9%E5%9D%91/"/>
+    <id>http://yoursite.com/2018/12/05/OpenWrt踩坑/</id>
     <published>2018-12-05T10:59:56.000Z</published>
-    <updated>2019-03-11T08:22:47.926Z</updated>
+    <updated>2019-03-15T08:23:11.062Z</updated>
     
     <summary type="html">
     
@@ -48,9 +92,7 @@
     </summary>
     
     
-      <category term="openwrt" scheme="http://yoursite.com/tags/openwrt/"/>
-    
-      <category term="配置" scheme="http://yoursite.com/tags/%E9%85%8D%E7%BD%AE/"/>
+      <category term="OpenWrt" scheme="http://yoursite.com/tags/OpenWrt/"/>
     
   </entry>
   

@@ -97,16 +97,16 @@
 
 
   <meta name="description" content="前言由于业务上的需求，本来在做Android开发的我直接被从零开始，搞了几个月的OpenWrt。哇，本来还有点小激动，结果没人带，每天都是在 查资料 - 改代码 - 刷固件 - 查资料 循环。还好最后不负众望，现在总结一下被OpenWrt折磨的几个月的东西。">
-<meta name="keywords" content="openwrt,配置">
+<meta name="keywords" content="OpenWrt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="openwrt踩坑">
-<meta property="og:url" content="http://yoursite.com/2018/12/05/openwrt踩坑/index.html">
+<meta property="og:title" content="OpenWrt踩坑">
+<meta property="og:url" content="http://yoursite.com/2018/12/05/OpenWrt踩坑/index.html">
 <meta property="og:site_name" content="鱼塘">
 <meta property="og:description" content="前言由于业务上的需求，本来在做Android开发的我直接被从零开始，搞了几个月的OpenWrt。哇，本来还有点小激动，结果没人带，每天都是在 查资料 - 改代码 - 刷固件 - 查资料 循环。还好最后不负众望，现在总结一下被OpenWrt折磨的几个月的东西。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T08:22:47.926Z">
+<meta property="og:updated_time" content="2019-03-15T08:23:11.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="openwrt踩坑">
+<meta name="twitter:title" content="OpenWrt踩坑">
 <meta name="twitter:description" content="前言由于业务上的需求，本来在做Android开发的我直接被从零开始，搞了几个月的OpenWrt。哇，本来还有点小激动，结果没人带，每天都是在 查资料 - 改代码 - 刷固件 - 查资料 循环。还好最后不负众望，现在总结一下被OpenWrt折磨的几个月的东西。">
 
 
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/05/openwrt踩坑/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/05/OpenWrt踩坑/"/>
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>openwrt踩坑 | 鱼塘</title>
+  <title>OpenWrt踩坑 | 鱼塘</title>
   
 
 
@@ -360,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/openwrt踩坑/"/>
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/OpenWrt踩坑/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="最咸的鱼"/>
@@ -377,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">openwrt踩坑
+          <h1 class="post-title" itemprop="name headline">OpenWrt踩坑
 
               
             
@@ -420,7 +420,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-11 16:22:47" itemprop="dateModified" datetime="2019-03-11T16:22:47+08:00">2019-03-11</time>
+                <time title="修改时间：2019-03-15 16:23:11" itemprop="dateModified" datetime="2019-03-15T16:23:11+08:00">2019-03-15</time>
               
             
           </span>
@@ -464,7 +464,7 @@
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于业务上的需求，本来在做Android开发的我直接被从零开始，搞了几个月的OpenWrt。哇，本来还有点小激动，结果没人带，每天都是在 查资料 - 改代码 - 刷固件 - 查资料 循环。还好最后不负众望，现在总结一下被OpenWrt折磨的几个月的东西。</p>
 <a id="more"></a>
-<h3 id="一、环境篇"><a href="#一、环境篇" class="headerlink" title="一、环境篇"></a>一、环境篇</h3><ol>
+<h3 id="环境篇"><a href="#环境篇" class="headerlink" title="环境篇"></a>环境篇</h3><ol>
 <li><p>依赖环境</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib flex git-core gettext libssl-dev ccache</span><br></pre></td></tr></table></figure>
 </li>
@@ -487,7 +487,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="二、网络篇"><a href="#二、网络篇" class="headerlink" title="二、网络篇"></a>二、网络篇</h3><ol>
+<h3 id="网络篇"><a href="#网络篇" class="headerlink" title="网络篇"></a>网络篇</h3><ol>
 <li><p>默认添加iptables规则</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim package/network/config/firewall/files/firewall.user</span><br><span class="line">+		iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o tun0 -j MASQUERADE</span><br></pre></td></tr></table></figure>
 </li>
@@ -509,8 +509,14 @@
 <li><p>修改 switch </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 确认网口后，修改网口 lan/wan 状态</span><br><span class="line">vim target/linux/ar71xx/base-files/etc/board.d/02_network</span><br><span class="line"></span><br><span class="line">        ap143|\</span><br><span class="line">        rb-433|\</span><br><span class="line">        rb-433u)</span><br><span class="line">                ucidef_set_interfaces_lan_wan "eth0" "eth1"</span><br><span class="line">                ucidef_add_switch "switch0" \</span><br><span class="line">                        "2:lan" "3:lan" "4:lan" "0@eth1"</span><br><span class="line">                ;;</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>LAN口DHCP自定义分配DNS</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/dhcp</span><br><span class="line"></span><br><span class="line">config dhcp 'lan'</span><br><span class="line">	list 'dhcp_option' '6,8.8.8.8,1.1.1.1'</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 dnsmasq 作为 DHCP 服务时设置 DNS</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim package/network/services/dnsmasq/files/dhcp.conf</span><br><span class="line"></span><br><span class="line">list 'dhcp_option' '6,8.8.8.8,1.1.1.1'</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="三、系统篇"><a href="#三、系统篇" class="headerlink" title="三、系统篇"></a>三、系统篇</h3><ol>
+<h3 id="系统篇"><a href="#系统篇" class="headerlink" title="系统篇"></a>系统篇</h3><ol>
 <li><p>开机自启</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim package/base-files/files/etc/rc.local</span><br><span class="line">+		/etc/init.d/cron enable</span><br><span class="line">+		/etc/init.d/cron start</span><br></pre></td></tr></table></figure>
 </li>
@@ -544,8 +550,14 @@
 <li><p>添加用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 按照相同格式在一下文件中添加记录</span><br><span class="line">vim package/base-files/files/etc/passwd</span><br><span class="line">vim package/base-files/files/etc/shadow</span><br><span class="line">vim package/base-files/files/etc/group</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>添加用户到 sudo 组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim package/feeds/packages/sudo/Makefile</span><br><span class="line"></span><br><span class="line">define Package/sudo/install</span><br><span class="line">	···</span><br><span class="line">        chmod <span class="number">0755</span> $(<span class="number">1</span>)/etc/sudoers</span><br><span class="line">        echo <span class="string">"admin ALL=(ALL) NOPASSWD:ALL"</span> &gt;&gt; $(<span class="number">1</span>)/etc/sudoers</span><br><span class="line">        chmod <span class="number">0440</span> $(<span class="number">1</span>)/etc/sudoers</span><br><span class="line">   ···</span><br><span class="line">endef</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mt7621的网卡MAC地址配置</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim target/linux/ramips/dts/Leguang-Nxc200p<span class="number">-16</span>M.dts</span><br><span class="line"></span><br><span class="line">&amp;ethernet &#123;</span><br><span class="line">        mtd-mac-address = &lt;&amp;factory <span class="number">0xe000</span>&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"># <span class="number">57344</span> = <span class="number">0xe000</span></span><br><span class="line">target/linux/ramips/base-files/etc/board.d/<span class="number">02</span>_network</span><br><span class="line">       rb750gr3)</span><br><span class="line">                lan_mac=$(mtd_get_mac_binary factory <span class="number">57344</span>)</span><br><span class="line">                wan_mac=$(macaddr_add <span class="string">"$lan_mac"</span> <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="四、软件篇"><a href="#四、软件篇" class="headerlink" title="四、软件篇"></a>四、软件篇</h3><ol>
+<h3 id="软件篇"><a href="#软件篇" class="headerlink" title="软件篇"></a>软件篇</h3><ol>
 <li><p>添加自己的程序 - HelloWorld（含依赖库的helloworld程序）</p>
 <ul>
 <li>创建hellloworld包</li>
@@ -567,7 +579,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="五、模块篇"><a href="#五、模块篇" class="headerlink" title="五、模块篇"></a>五、模块篇</h3><ol>
+<h3 id="模块篇"><a href="#模块篇" class="headerlink" title="模块篇"></a>模块篇</h3><ol>
 <li><p>添加 LONGSUNG U9300C 4G模块支持（ap147）</p>
 <ul>
 <li><p>内核选项</p>
@@ -590,7 +602,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="六、编译刷机篇"><a href="#六、编译刷机篇" class="headerlink" title="六、编译刷机篇"></a>六、编译刷机篇</h3><ol>
+<h3 id="编译刷机篇"><a href="#编译刷机篇" class="headerlink" title="编译刷机篇"></a>编译刷机篇</h3><ol>
 <li><p>备份分区</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd if=/dev/mtd5 of=/tmp/firmware_backup.bin</span><br></pre></td></tr></table></figure>
 </li>
@@ -639,9 +651,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/openwrt/" rel="tag"><i class="fa fa-tag"></i> openwrt</a>
-          
-            <a href="/tags/配置/" rel="tag"><i class="fa fa-tag"></i> 配置</a>
+            <a href="/tags/OpenWrt/" rel="tag"><i class="fa fa-tag"></i> OpenWrt</a>
           
         </div>
       
@@ -745,7 +755,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -782,7 +792,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -840,7 +854,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、环境篇"><span class="nav-number">2.</span> <span class="nav-text">一、环境篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、网络篇"><span class="nav-number">3.</span> <span class="nav-text">二、网络篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、系统篇"><span class="nav-number">4.</span> <span class="nav-text">三、系统篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、软件篇"><span class="nav-number">5.</span> <span class="nav-text">四、软件篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、模块篇"><span class="nav-number">6.</span> <span class="nav-text">五、模块篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、编译刷机篇"><span class="nav-number">7.</span> <span class="nav-text">六、编译刷机篇</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境篇"><span class="nav-number">2.</span> <span class="nav-text">环境篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络篇"><span class="nav-number">3.</span> <span class="nav-text">网络篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统篇"><span class="nav-number">4.</span> <span class="nav-text">系统篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件篇"><span class="nav-number">5.</span> <span class="nav-text">软件篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块篇"><span class="nav-number">6.</span> <span class="nav-text">模块篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译刷机篇"><span class="nav-number">7.</span> <span class="nav-text">编译刷机篇</span></a></li></ol></div>
             
 
           </div>
@@ -1021,7 +1035,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2018/12/05/openwrt踩坑/'
+    refer: '2018/12/05/OpenWrt踩坑/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
