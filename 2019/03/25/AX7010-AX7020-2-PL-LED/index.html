@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/03/25/AX7010-AX7020-2-PL-LED/1553512703483.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/25/AX7010-AX7020-2-PL-LED/1553513075458.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/25/AX7010-AX7020-2-PL-LED/1553513252819.png">
-<meta property="og:updated_time" content="2019-03-25T11:33:54.771Z">
+<meta property="og:updated_time" content="2019-03-25T11:39:11.605Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="黑金AX7010&#x2F;AX7020开发教程二 PL的“Hello World”LED实验">
 <meta name="twitter:description" content="前言本文属于黑金 AX7010/AX7020开发教程的第二篇文章，主要介绍基于 Zynq 7000 的 PL 部分实现的 “Hello World” 程序——LED实验，教程源自芯驿电子 ALINX：黑金 AX7010/7020 开发配套教程 ，本文及后续文章都是根据此教程撰写。">
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="创建时间：2019-03-25 08:33:43 / 修改时间：19:33:54" itemprop="dateCreated datePublished" datetime="2019-03-25T08:33:43+08:00">2019-03-25</time>
+              <time title="创建时间：2019-03-25 08:33:43 / 修改时间：19:39:11" itemprop="dateCreated datePublished" datetime="2019-03-25T08:33:43+08:00">2019-03-25</time>
             
 
             
@@ -553,8 +553,7 @@
 <p>之后直接跳过就行，重新综合，即可在工程摘要中查看功耗</p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p><img src="/2019/03/25/AX7010-AX7020-2-PL-LED/1553513075458.png" alt="1553513075458"></p>
 <p>基本同综合，实现后就可以烧录到开发板中</p>
-<p>###　下载和调试</p>
-<p>创建比特流：</p>
+<h3 id="下载和调试"><a href="#下载和调试" class="headerlink" title="下载和调试"></a>下载和调试</h3><p>创建比特流：</p>
 <p><img src="/2019/03/25/AX7010-AX7020-2-PL-LED/1553513252819.png" alt="1553513252819"></p>
 <p>完成后，打开硬件管理器（Open Hardware Manager），将开发板的 JTAG 接口接到电脑上，插上电源，开机。</p>
 <p>点击绿色的 Open target - Auto Connect，连接开发板</p>
@@ -562,6 +561,7 @@
 <p>开发板会 1s 亮、1s 灭，周期为 2s.</p>
 <p>注意：关机或断电程序会删除。</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.elecfans.com/pld/675612.html" target="_blank" rel="noopener">一文读懂Zynq-7000能干什么及其设计流程</a> </p>
+<p>芯驿电子 ALINX：黑金 AX7010/7020 开发配套教程</p>
 
       
     </div>
@@ -790,7 +790,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键名词"><span class="nav-number">2.</span> <span class="nav-text">关键名词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目"><span class="nav-number">3.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目介绍"><span class="nav-number">4.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">5.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仿真"><span class="nav-number">6.</span> <span class="nav-text">仿真</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加约束"><span class="nav-number">7.</span> <span class="nav-text">添加约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合"><span class="nav-number">8.</span> <span class="nav-text">综合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">9.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键名词"><span class="nav-number">2.</span> <span class="nav-text">关键名词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目"><span class="nav-number">3.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目介绍"><span class="nav-number">4.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">5.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仿真"><span class="nav-number">6.</span> <span class="nav-text">仿真</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加约束"><span class="nav-number">7.</span> <span class="nav-text">添加约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合"><span class="nav-number">8.</span> <span class="nav-text">综合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">9.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载和调试"><span class="nav-number">10.</span> <span class="nav-text">下载和调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">11.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
