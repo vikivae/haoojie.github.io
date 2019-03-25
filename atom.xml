@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T05:57:57.399Z</updated>
+  <updated>2019-03-25T11:33:54.771Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>黑金AX7010/AX7020开发教程二 PL的“Hello World”LED实验</title>
+    <link href="http://yoursite.com/2019/03/25/AX7010-AX7020-2-PL-LED/"/>
+    <id>http://yoursite.com/2019/03/25/AX7010-AX7020-2-PL-LED/</id>
+    <published>2019-03-25T00:33:43.000Z</published>
+    <updated>2019-03-25T11:33:54.771Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;本文属于黑金 AX7010/AX7020开发教程的第二篇文章，主要介绍基于 Zynq 7000 的 PL 部分实现的 “Hello World” 程序——LED实验，教程源自&lt;code&gt;芯驿电子 ALINX：黑金 AX7010/7020 开发配套教程&lt;/code&gt; ，本文及后续文章都是根据此教程撰写。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="FPGA" scheme="http://yoursite.com/tags/FPGA/"/>
+    
+      <category term="AX7010/AX7020" scheme="http://yoursite.com/tags/AX7010-AX7020/"/>
+    
+      <category term="Zynq7000" scheme="http://yoursite.com/tags/Zynq7000/"/>
+    
+  </entry>
+  
+  <entry>
     <title>黑金AX7010/AX7020开发教程一 Windows下安装vivado并导入证书</title>
     <link href="http://yoursite.com/2019/03/23/AX7010-AX7020-1-vivado/"/>
     <id>http://yoursite.com/2019/03/23/AX7010-AX7020-1-vivado/</id>
     <published>2019-03-23T01:27:09.000Z</published>
-    <updated>2019-03-24T05:57:57.399Z</updated>
+    <updated>2019-03-25T01:17:34.315Z</updated>
     
     <summary type="html">
     
@@ -33,6 +55,8 @@
       <category term="FPGA" scheme="http://yoursite.com/tags/FPGA/"/>
     
       <category term="AX7010/AX7020" scheme="http://yoursite.com/tags/AX7010-AX7020/"/>
+    
+      <category term="Zynq7000" scheme="http://yoursite.com/tags/Zynq7000/"/>
     
   </entry>
   
